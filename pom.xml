@@ -4,7 +4,7 @@
 
   <groupId>io.ebean.tile</groupId>
   <artifactId>kotlin-kapt</artifactId>
-  <version>1.3</version>
+  <version>1.4-SNAPSHOT</version>
   <packaging>tile</packaging>
 
   <parent>
@@ -15,7 +15,7 @@
 
   <scm>
     <developerConnection>scm:git:git@github.com:ebean-orm-tools/ebean-kotlin-kapt.git</developerConnection>
-    <tag>kotlin-kapt-1.3</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
