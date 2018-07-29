@@ -2,9 +2,9 @@
 <project>
 
   <properties>
-    <kotlin.version>1.2.50</kotlin.version>
+    <kotlin.version>1.2.51</kotlin.version>
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-    <kotlin-querybean-generator.version>11.4.1</kotlin-querybean-generator.version>
+    <kotlin-querybean-generator.version>11.19.2</kotlin-querybean-generator.version>
   </properties>
 
   <build>
