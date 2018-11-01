@@ -2,9 +2,9 @@
 <project>
 
   <properties>
-    <kotlin.version>1.2.51</kotlin.version>
+    <kotlin.version>1.2.71</kotlin.version>
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-    <kotlin-querybean-generator.version>11.19.2</kotlin-querybean-generator.version>
+    <kotlin-querybean-generator.version>11.24.1</kotlin-querybean-generator.version>
   </properties>
 
   <build>
@@ -13,12 +13,6 @@
     <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
     <plugins>
-
-      <plugin>
-        <groupId>io.ebean.tools</groupId>
-        <artifactId>codegen-maven-plugin</artifactId>
-        <version>${codegen-maven-plugin.version}</version>
-      </plugin>
 
       <plugin>
         <artifactId>kotlin-maven-plugin</artifactId>
