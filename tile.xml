@@ -3,8 +3,7 @@
 
   <properties>
     <kotlin.version>1.2.71</kotlin.version>
-    <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-    <kotlin-querybean-generator.version>11.24.1</kotlin-querybean-generator.version>
+    <kotlin-querybean-generator.version>11.32.1</kotlin-querybean-generator.version>
   </properties>
 
   <build>
@@ -15,18 +14,23 @@
     <plugins>
 
       <plugin>
-        <artifactId>kotlin-maven-plugin</artifactId>
         <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
         <version>${kotlin.version}</version>
+        <configuration>
+          <apiVersion>1.2</apiVersion>
+          <jvmTarget>1.8</jvmTarget>
+        </configuration>
         <executions>
           <execution>
             <id>kapt</id>
             <goals>
               <goal>kapt</goal>
             </goals>
-            <configuration>
+            <configuration tiles-keep-id="true">
               <sourceDirs>
                 <sourceDir>src/main/kotlin</sourceDir>
+                <sourceDir>src/main/java</sourceDir>
               </sourceDirs>
               <annotationProcessorPaths>
                 <annotationProcessorPath>
@@ -39,31 +43,25 @@
           </execution>
 
           <execution>
+            <configuration tiles-keep-id="true"/>
             <id>compile</id>
+            <phase>compile</phase>
             <goals>
               <goal>compile</goal>
             </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>src/main/kotlin</sourceDir>
-              </sourceDirs>
-            </configuration>
           </execution>
-
           <execution>
+            <configuration tiles-keep-id="true"/>
             <id>test-compile</id>
+            <phase>test-compile</phase>
             <goals>
               <goal>test-compile</goal>
             </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>src/test/kotlin</sourceDir>
-              </sourceDirs>
-            </configuration>
           </execution>
 
         </executions>
       </plugin>
+
     </plugins>
   </build>
 
